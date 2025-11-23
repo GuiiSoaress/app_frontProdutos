@@ -1,0 +1,38 @@
+
+.header {
+height: 65px;
+background: #1e1e2f;
+color: white;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 30px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+.logo {
+font-size: 22px;
+font-weight: bold;
+letter-spacing: 1px;
+}
+
+
+.nav ul {
+list-style: none;
+display: flex;
+gap: 25px;
+}
+
+
+.nav a {
+color: white;
+text-decoration: none;
+font-size: 16px;
+transition: 0.2s;
+}
+
+
+.nav a:hover {
+color: #00d1ff;
+}

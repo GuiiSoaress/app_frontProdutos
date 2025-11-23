@@ -3,6 +3,7 @@ package api;
 import static spark.Spark.after;
 import static spark.Spark.delete;
 import static spark.Spark.get;
+import static spark.Spark.options;
 import static spark.Spark.port;
 import static spark.Spark.post;
 import static spark.Spark.put;
@@ -33,12 +34,28 @@ public class ApiProduto {
         // configuração do Servidor
         port(4567); // Define a porta da API. Acesso via http://localhost:4567
 
-        // filtro para definir o tipo de conteúdo como JSON
-        after(new Filter() {
-            @Override
-            public void handle(Request request, Response response) {
-                response.type(APPLICATION_JSON);
+        // CONFIGURAÇÃO CORS - Adicionar ANTES de todas as rotas
+        options("/*", (request, response) -> {
+            String accessControlRequestHeaders = request.headers("Access-Control-Request-Headers");
+            if (accessControlRequestHeaders != null) {
+                response.header("Access-Control-Allow-Headers", accessControlRequestHeaders);
             }
+
+            String accessControlRequestMethod = request.headers("Access-Control-Request-Method");
+            if (accessControlRequestMethod != null) {
+                response.header("Access-Control-Allow-Methods", accessControlRequestMethod);
+            }
+
+            return "OK";
+        });
+
+        // Filtro CORS para todas as respostas
+        after((request, response) -> {
+            response.header("Access-Control-Allow-Origin", "*");
+            response.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+            response.header("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With");
+            response.header("Access-Control-Allow-Credentials", "true");
+            response.type(APPLICATION_JSON);
         });
 
         // GET /produtos - Buscar todos
