@@ -1,0 +1,198 @@
+/* Container */
+.categorias-container {
+  padding: 20px;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  max-width: 1000px;
+  margin: 24px auto;
+  color: #222;
+}
+
+/* Top bar */
+.top-bar {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.input-busca {
+  padding: 10px 12px;
+  width: 360px;
+  max-width: 45%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: box-shadow .15s ease;
+}
+.input-busca:focus {
+  box-shadow: 0 0 0 4px rgba(0,209,255,0.08);
+}
+
+/* Buttons */
+.btn-add {
+  background: #1e1e2f;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform .12s ease, background .12s ease;
+}
+.btn-add:hover { transform: translateY(-2px); background: #0f1724; }
+
+/* Lista / items */
+.lista-categorias {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Empty state */
+.vazio {
+  padding: 20px;
+  background: #fff6;
+  border-radius: 8px;
+  text-align: center;
+  color: #666;
+}
+
+/* Card da categoria */
+.item-categoria {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-left: 6px solid #00a3c7;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.item-categoria:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(16,24,40,0.08);
+}
+
+/* Info categoria */
+.info-categoria {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.linha-titulo {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.nome-cat {
+  font-size: 16px;
+}
+
+.detalhes {
+  display: flex;
+  gap: 14px;
+  color: #555;
+  font-size: 13px;
+}
+
+/* Ações */
+.acoes {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.btn-editar {
+  padding: 8px 12px;
+  background: #ffbb00;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn-editar:hover { filter: brightness(.95); }
+
+.btn-deletar {
+  padding: 8px 12px;
+  background: #ef5350;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn-deletar:hover { filter: brightness(.95); }
+
+/* POPUP */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.popup {
+  background: #fff;
+  width: 420px;
+  max-width: 100%;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 14px 40px rgba(16,24,40,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.popup input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  outline: none;
+}
+.popup input:focus { box-shadow: 0 0 0 4px rgba(0,209,255,0.06); }
+
+.popup-buttons {
+  margin-top: 6px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.btn-salvar {
+  padding: 10px 14px;
+  background: #1e1e2f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.btn-cancelar {
+  padding: 10px 14px;
+  background: transparent;
+  color: #555;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 720px) {
+  .top-bar { flex-direction: column; align-items: stretch; gap: 10px; }
+  .input-busca { width: 100%; max-width: none; }
+  .detalhes { flex-direction: column; gap: 6px; }
+  .acoes { gap: 6px; }
+}
