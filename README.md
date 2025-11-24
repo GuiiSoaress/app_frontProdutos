@@ -23,13 +23,13 @@ README – Guia de Execução do Projeto
     
 3. Instruções de Execução do Front-End
   3.1. Acesse a pasta do front:
-    cd produtosfront
+    -cd produtosfront
   3.2. Instale dependências:
-    npm install
+    -npm install
   3.3. Execute o projeto:
-    npm start
+    -npm start
   3.4. Acesse pelo navegador:
-    http://localhost:3000
-    O sistema estará em funcionamento com a integração completa entre Front-End e Back-End.
-   (em caso de erro do router use npm install react-router-dom)
+    -http://localhost:3000
+    -O sistema estará em funcionamento com a integração completa entre Front-End e Back-End.
+    -(em caso de erro do router use npm install react-router-dom)
     
