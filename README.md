@@ -1,12 +1,12 @@
 README – Guia de Execução do Projeto
 1. Identificação
-Guilherme Soares da Silva - Matricula: 25173253
+  - Guilherme Soares da Silva - Matricula: 25173253
 
-2. Instruções de Execução do Back-End
-Siga os passos abaixo para configurar e executar o servidor:
+2. Instruções de Execução do Back-End 
+-  Siga os passos abaixo para configurar e executar o servidor:
   2.1. Clonando o repositório
-  Execute:
-  git clone https://github.com/GuiiSoaress/app_frontProdutos
+  -  Execute:
+    -git clone https://github.com/GuiiSoaress/app_frontProdutos
   
   2.2. Configuração do Banco de Dados
   - Abra o MySQL Workbench.
