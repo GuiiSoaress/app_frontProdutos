@@ -13,11 +13,14 @@ Sistema completo para gerenciamento de produtos com back-end em Java e front-end
 
 ## 🚀 Configuração e Execução
 
+Lembre se de ter instalado na sua maquina o Java JDK e esteja configurado corretamente.
+Caso use vscode, deve-se instalar o java Extension pack
+
 ### 1️⃣ Clonando o Repositório
 
 ```bash
-git clone https://github.com/GuiiSoaress/app_frontProdutos__
-cd app_frontProdutos__
+git clone https://github.com/GuiiSoaress/app_frontProdutos
+cd app_frontProdutos
 ```
 
 ---
@@ -28,14 +31,16 @@ cd app_frontProdutos__
 
 1. Abra o **MySQL Workbench**
 2. Localize o arquivo `BancoDeDados.sql` na pasta `produtosback`
-3. Execute o script SQL para criar o banco de dados e as tabelas necessárias
+3. Clique em Administration -> Data Import/restore
+4. Selecione o arquivo BancoDeDados.sql e o importe
+
 
 #### 2. Configurar Credenciais do MySQL
 
 Edite o arquivo de conexão com o banco:
 
 ```
-📁 produtosback/src/util/connectionFactory.java
+📁 produtosback/src/util/ConnectionFactory.java
 ```
 
 Altere a senha do usuário `root` para corresponder à configuração do MySQL na sua máquina:
@@ -44,6 +49,7 @@ Altere a senha do usuário `root` para corresponder à configuração do MySQL n
 // Exemplo:
 private static final String PASS = "sua_senha_aqui";
 ```
+* Não esqueça de salvar o arquivo (Ctrl + S)
 
 #### 3. Executar a API
 
